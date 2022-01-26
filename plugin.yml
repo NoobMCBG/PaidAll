@@ -1,0 +1,12 @@
+name: PayAll
+main: NoobMCBG\PayAll\PayAll
+api: 4.0.0
+version: 1.0.0
+author: NoobMCBG
+description: Pay money to all people online'
+depend: EconomyAPI
+
+permissions:
+  payall.pay:
+    description: Permission use commands /payall
+    default: true
