@@ -1,41 +1,41 @@
 <div align="center">
-<h1>PayAll | v1.0.0<h1>
+<h1>PaidAll | v1.0.0<h1>
 </div>
 <p align="center">
 <br>
-✔️ Pay money to all people online ✔️
+✔️ Paid money to all people online ✔️
 </p>
 
 <br>
 
 ## Features
-- Pay money to all people online
+- Paid money to all people online
 
 <br>
   
 ## Commands
 | **Commands** | **Description** | **Aliases** |
 | --- | --- | --- |
-| **/payall** | **Commands paid all players online** | **/pa** |
+| **/paidall** | **Commands paid all players online** | **[pa, payall]** |
 
 <br>
   
 ## Permissions
 | **Permission** | **Description** | **Default** |
 | --- | --- | --- |
-| **`payall.pay`** | **Permission use commands /payall** | **true** |
+| **`paidall.paid`** | **Permission use commands /paidall** | **true** |
 
 <br>
 
 ## Config
 ```
 ---
-#   ░██████╗░░█████╗░██╗░░░██╗░█████╗░██╗░░░░░██╗░░░░░
-#   ░██╔══██╗██╔══██╗╚██╗░██╔╝██╔══██╗██║░░░░░██║░░░░░
-#   ░██████╔╝███████║░╚████╔╝░███████║██║░░░░░██║░░░░░
-#   ░██╔═══╝░██╔══██║░░╚██╔╝░░██╔══██║██║░░░░░██║░░░░░
-#   ░██║░░░░░██║░░██║░░░██║░░░██║░░██║███████╗███████╗
-#   ░╚═╝░░░░░╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚══════╝
+#   ██████╗░░█████╗░██╗██████╗░░█████╗░██╗░░░░░██╗░░░░░
+#   ██╔══██╗██╔══██╗██║██╔══██╗██╔══██╗██║░░░░░██║░░░░░
+#   ██████╔╝███████║██║██║░░██║███████║██║░░░░░██║░░░░░
+#   ██╔═══╝░██╔══██║██║██║░░██║██╔══██║██║░░░░░██║░░░░░
+#   ██║░░░░░██║░░██║██║██████╔╝██║░░██║███████╗███████╗
+#   ╚═╝░░░░░╚═╝░░╚═╝╚═╝╚═════╝░╚═╝░░╚═╝╚══════╝╚══════╝
 
 # Message Paid Successfully
 # Use {money} to show the amount that player paid
@@ -61,17 +61,17 @@ paid-fallied:
 <br>
 
 ## For Developer
-- You can access to PayAll by using `PayAll::getInstance()`
-- PayAll Usage:
+- You can access to PaidAll by using `PaidAll::getInstance()`
+- PaidAll Usage:
 ```php
 $money = 1000;
-PayAll::getInstance()->payAll($money);
+PaidAll::getInstance()->paidAll($money);
 ```
 
 <br>
 
 ## Install
 - Step 1: Click the "Direct Download" button to download the plugin
-- Step 2: move the file "PayAll.phar" into the file "plugins"
+- Step 2: move the file "PaidAll.phar" into the file "plugins"
 - Step 3: Restart server for plugins to work
 
