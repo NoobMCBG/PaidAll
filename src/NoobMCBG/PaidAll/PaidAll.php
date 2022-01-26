@@ -21,19 +21,24 @@ class PaidAll extends PluginBase implements Listener {
 	public function onEnable() : void {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->saveDefaultConfig();
+		$this->checkUpdate();
 		$this->getServer()->getCommandMap()->register("PaidAll", new PaidAllCommands($this));
 		self::$instance = $this;
 	}
+	
+	public function checkUpdate(bool $isRetry = false) : void {
+            $this->getServer()->getAsyncPool()->submitTask(new CheckUpdateTask($this->getDescription()->getName(), $this->getDescription()->getVersion()));
+        }
 
 	public function paidAll($money){
-		if(is_numeric($money)){
-            foreach($this->getServer()->getOnlinePlayers() as $player){
-            	if($player instanceof Player){
-            		$count = count($this->getServer()->getOnlinePlayers());
-            		$amount = $money/$count;
-            		EconomyAPI::getInstance()->addMoney($player, $amount);
-            	}
+	    if(is_numeric($money)){
+               foreach($this->getServer()->getOnlinePlayers() as $player){
+            	   if($player instanceof Player){
+            	       $count = count($this->getServer()->getOnlinePlayers());
+            	       $amount = $money/$count;
+            	       EconomyAPI::getInstance()->addMoney($player, $amount);
+            	   }
+               }
             }
-        }
 	}
 }
