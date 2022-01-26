@@ -34,7 +34,7 @@ class PaidAllCommands extends Command implements PluginOwned {
 		            $money = (int)$args[0];
                     $count = count($this->getOwningPlugin()->getServer()->getOnlinePlayers());
 		        	$amount = (int)$args[0]/$count;
-		            $this->getOwningPlugin()->payAll($money);
+		            $this->getOwningPlugin()->paidAll($money);
 		            if($this->getOwningPlugin()->getConfig()->getAll()["broadcast-paid"]["broadcast"] == true){
                         $this->getOwningPlugin()->getServer()->broadcastMessage(str_replace(["{money}", "{player}"], [$amount, "CONSOLE"], strval($this->getOwningPlugin()->getConfig()->getAll()["broadcast-paid"]["msg-broadcast-paid"])));
                     }
