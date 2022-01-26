@@ -2,7 +2,6 @@
 <h1>PayAll | v1.0.0<h1>
 </div>
 <p align="center">
-<a href="https://poggit.pmmp.io/p/PayAll"><img src="https://poggit.pmmp.io/shield.state/PayAll"></a>
 <br>
 ✔️ Pay money to all people online ✔️
 </p>
