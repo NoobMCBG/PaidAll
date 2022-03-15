@@ -3,7 +3,7 @@
 | **Plugins** | **PaidAll** |
 | --- | --- |
 | **Version** | **<a href="https://poggit.pmmp.io/p/PaidAll"><img src="https://poggit.pmmp.io/shield.state/PaidAll"></a>** |
-| **API** | **<a href="https://poggit.pmmp.io/p/PaidAll"><img src="https://poggit.pmmp.io/shield.api/PaidAll"></a>>** |
+| **API** | **<a href="https://poggit.pmmp.io/p/PaidAll"><img src="https://poggit.pmmp.io/shield.api/PaidAll"></a>** |
 | **Total Download** | **<a href="https://poggit.pmmp.io/p/PaidAll"><img src="https://poggit.pmmp.io/shield.dl.total/PaidAll"></a>** |
 | **Download** | **<a href="https://poggit.pmmp.io/p/PaidAll"><img src="https://poggit.pmmp.io/shield.dl/PaidAll"></a>** |
 
