@@ -11,6 +11,8 @@ use NoobMCBG\PaidAll\libs\YTBJero\LibEconomy\Economy;
 use NoobMCBG\PaidAll\commands\PaidAllCommands;
 
 class PaidAll extends PluginBase implements Listener {
+	
+	public $currency = [];
 
 	public static $instance;
 
@@ -19,6 +21,22 @@ class PaidAll extends PluginBase implements Listener {
 	}
 
 	public function onEnable() : void {
+		if($this->getServer()->getPluginManager()->getPlugin("BedrockEconomy") == null and $this->getServer()->getPluginManager()->getPlugin("EconomyAPI") == null){
+			$this->getLogger()->error("Please download one of 2 plugins EconomyAPI or BedrockEconomy to operate this plugin !");
+			$this->getServer()->getPluginManager()->disablePlugin($this);
+		}
+		if($this->getServer()->getPluginManager()->getPlugin("BedrockEconomy") !== null and $this->getServer()->getPluginManager()->getPlugin("EconomyAPI") == null){
+			$this->getLogger()->notice("PaidAll main currency has been set to BedrockEconomy");
+			$this->setDefaultCurrencyUnit(true, false);
+		}
+		if($this->getServer()->getPluginManager()->getPlugin("EconomyAPI") !== null and $this->getServer()->getPluginManager()->getPlugin("BedrockEconomy") == null){
+			$this->getLogger()->notice("PaidAll main currency has been set to EconomyAPI");
+			$this->setDefaultCurrencyUnit(false, true);
+		}
+		if($this->getServer()->getPluginManager()->getPlugin("EconomyAPI") !== null and $this->getServer()->getPluginManager()->getPlugin("BedrockEconomy") !== null){
+			$this->getLogger()->notice("PaidAll main currency has been set to EconomyAPI and BedrockEconomy");
+			$this->setDefaultCurrencyUnit(true, true);
+		}
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->saveDefaultConfig();
 		$this->checkUpdate();
