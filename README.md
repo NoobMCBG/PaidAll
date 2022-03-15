@@ -3,6 +3,10 @@
 </div>
 <p align="center">
 <br>
+<a href="https://poggit.pmmp.io/p/PaidAll"><img src="https://poggit.pmmp.io/shield.state/PaidAll"></a>
+<a href="https://poggit.pmmp.io/p/PaidAll"><img src="https://poggit.pmmp.io/shield.api/PaidAll"></a>
+<a href="https://poggit.pmmp.io/p/PaidAll"><img src="https://poggit.pmmp.io/shield.dl.total/PaidAll"></a>
+<a href="https://poggit.pmmp.io/p/PaidAll"><img src="https://poggit.pmmp.io/shield.dl/PaidAll"></a>
 ✔️ Paid money to all people online ✔️
 </p>
 
