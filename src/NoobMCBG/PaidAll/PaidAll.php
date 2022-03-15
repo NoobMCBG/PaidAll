@@ -6,8 +6,7 @@ namespace NoobMCBG\PaidAll;
 
 use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
-use pocketmine\event\Listener;
-use onebone\economyapi\EconomyAPI;
+use pocketmine\event\Listener;\
 use NoobMCBG\PaidAll\libs\YTBJero\LibEconomy\Economy;
 use NoobMCBG\PaidAll\commands\PaidAllCommands;
 
