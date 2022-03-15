@@ -1,17 +1,19 @@
 <div align="center">
 <h1>PaidAll | v1.0.0<h1>
-</div>
-<p align="center">
+## General
+
+| **Plugins** | **PaidAll** |
+| --- | --- |
+| **Version** | **<a href="https://poggit.pmmp.io/p/PaidAll"><img src="https://poggit.pmmp.io/shield.state/PaidAll"></a>** |
+| **API** | **<a href="https://poggit.pmmp.io/p/PaidAll"><img src="https://poggit.pmmp.io/shield.api/PaidAll"></a>>** |
+| **Total Download** | **<a href="https://poggit.pmmp.io/p/PaidAll"><img src="https://poggit.pmmp.io/shield.dl.total/PaidAll"></a>** |
+| **Download** | **<a href="https://poggit.pmmp.io/p/PaidAll"><img src="https://poggit.pmmp.io/shield.dl/PaidAll"></a>** |
+
 <br>
-<a href="https://poggit.pmmp.io/p/PaidAll"><img src="https://poggit.pmmp.io/shield.state/PaidAll"></a>
-<a href="https://poggit.pmmp.io/p/PaidAll"><img src="https://poggit.pmmp.io/shield.api/PaidAll"></a>
-<a href="https://poggit.pmmp.io/p/PaidAll"><img src="https://poggit.pmmp.io/shield.dl.total/PaidAll"></a>
-<a href="https://poggit.pmmp.io/p/PaidAll"><img src="https://poggit.pmmp.io/shield.dl/PaidAll"></a>
-<br>
-✔️ Paid money to all people online ✔️
-<br>
- ✔️ Automatically Paid When 2 Types of Plugins `EconomyAPI` or `BedrockEconomy`  ✔️
-</p>
+
+>- Paid money to all people online ✔️
+>- Automatically Paid When 2 Types of Plugins `EconomyAPI` or `BedrockEconomy` ✔️
+<img src="https://github.com/NoobMCBG/PaidAll/blob/Master/icon.png"/>
 
 <br>
 
