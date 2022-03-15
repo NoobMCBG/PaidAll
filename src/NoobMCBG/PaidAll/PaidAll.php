@@ -44,6 +44,17 @@ class PaidAll extends PluginBase implements Listener {
 		self::$instance = $this;
 	}
 	
+	public function setDefaultCurrencyUnit(bool $bedrockeconomy, bool $economyapi){
+		unset($this->currency["BedrockEconomy"]);
+		unset($this->currency["EconomyAPI"]);
+		$this->currency["BedrockEconomy"] = $bedrockeconomy;
+		$this->currency["EconomyAPI"] = $economyapi;
+	}
+	
+	public function getDefaultCurrencyUnit(){
+		return $this->currency;
+	}
+	
 	public function checkUpdate(bool $isRetry = false) : void {
             $this->getServer()->getAsyncPool()->submitTask(new CheckUpdateTask($this->getDescription()->getName(), $this->getDescription()->getVersion()));
         }
