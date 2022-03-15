@@ -11,7 +11,7 @@
 
 >- Paid money to all people online ✔️
 >- Automatically Paid When 2 Types of Plugins `EconomyAPI` or `BedrockEconomy` ✔️
-<img src="https://github.com/NoobMCBG/PaidAll/blob/Master/icon.png"/>
+<img src="https://github.com/NoobMCBG/PaidAll/blob/main/icon.png"/>
 
 <br>
 
