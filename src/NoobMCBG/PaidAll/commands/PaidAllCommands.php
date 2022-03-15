@@ -8,7 +8,7 @@ use pocketmine\player\Player;
 use pocketmine\plugin\PluginOwned;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use NoobMCBG\PaidAll\libs\YTBJero\LibEconomy\Economy;
+use NoobMCBG\PaidAll\Economy;
 use NoobMCBG\PaidAll\PaidAll;
 
 class PaidAllCommands extends Command implements PluginOwned {
