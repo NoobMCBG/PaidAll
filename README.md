@@ -1,5 +1,3 @@
-<div align="center">
-<h1>PaidAll | v1.0.0<h1>
 ## General
 
 | **Plugins** | **PaidAll** |
