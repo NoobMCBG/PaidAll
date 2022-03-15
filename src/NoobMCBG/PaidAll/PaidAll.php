@@ -8,6 +8,7 @@ use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use onebone\economyapi\EconomyAPI;
+use NoobMCBG\PaidAll\libs\YTBJero\LibEconomy\Economy;
 use NoobMCBG\PaidAll\commands\PaidAllCommands;
 
 class PaidAll extends PluginBase implements Listener {
@@ -36,7 +37,7 @@ class PaidAll extends PluginBase implements Listener {
             	   if($player instanceof Player){
             	       $count = count($this->getServer()->getOnlinePlayers());
             	       $amount = $money/$count;
-            	       EconomyAPI::getInstance()->addMoney($player, $amount);
+		       Economy::addMoney($player, $amount);
             	   }
                }
             }
