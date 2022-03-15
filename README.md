@@ -9,12 +9,15 @@
 <a href="https://poggit.pmmp.io/p/PaidAll"><img src="https://poggit.pmmp.io/shield.dl/PaidAll"></a>
 <br>
 ✔️ Paid money to all people online ✔️
+<br>
+ ✔️ Automatically Paid When 2 Types of Plugins `EconomyAPI` or `BedrockEconomy`  ✔️
 </p>
 
 <br>
 
 ## Features
-- Paid money to all people online
+>- Paid money to all people online
+>- Automatically Paid When 2 Types of Plugins `EconomyAPI` or `BedrockEconomy`
 
 <br>
   
@@ -66,8 +69,8 @@ paid-fallied:
 <br>
 
 ## For Developer
-- You can access to PaidAll by using `PaidAll::getInstance()`
-- PaidAll Usage:
+>- You can access to PaidAll by using `PaidAll::getInstance()`
+>- PaidAll Usage:
 ```php
 $money = 1000;
 PaidAll::getInstance()->paidAll($money);
@@ -76,7 +79,6 @@ PaidAll::getInstance()->paidAll($money);
 <br>
 
 ## Install
-- Step 1: Click the "Direct Download" button to download the plugin
-- Step 2: move the file "PaidAll.phar" into the file "plugins"
-- Step 3: Restart server for plugins to work
-
+>- Step 1: Click the `Direct Download` button to download the plugin
+>- Step 2: move the file `PaidAll.phar` into the file `plugins`
+>- Step 3: Restart server for plugins to work
