@@ -15,7 +15,7 @@ class Economy {
             Server::getInstance()->getPluginManager()->getPlugin("BedrockEconomy")->getAPI()->addToPlayerBalance($player->getName(), (int)$amount);
         }
         if(PaidAll::getInstance()->getDefaultCurrencyUnit()["EconomyAPI"] == true){
-            Server::getInstance()->getPluginManager()->getPlugin("EconomyAPI")->getAPI()->addMoney($player, (int)$amount);
+            Server::getInstance()->getPluginManager()->getPlugin("EconomyAPI")->addMoney($player, (int)$amount);
         }
     }
 
@@ -24,7 +24,7 @@ class Economy {
             Server::getInstance()->getPluginManager()->getPlugin("BedrockEconomy")->getAPI()->subtractFromPlayerBalance($player->getName(), (int)$amount);
         }
         if(PaidAll::getInstance()->getDefaultCurrencyUnit()["EconomyAPI"] == true){
-            Server::getInstance()->getPluginManager()->getPlugin("EconomyAPI")->getAPI()->reduceMoney($player, (int)$amount);
+            Server::getInstance()->getPluginManager()->getPlugin("EconomyAPI")->reduceMoney($player, (int)$amount);
         }
     }
 
@@ -33,7 +33,7 @@ class Economy {
             return Server::getInstance()->getPluginManager()->getPlugin("BedrockEconomy")->getAPI()->getPlayerBalance($player->getName());
         }
         if(PaidAll::getInstance()->getDefaultCurrencyUnit()["EconomyAPI"] == true){
-            return Server::getInstance()->getPluginManager()->getPlugin("EconomyAPI")->getAPI()->myMoney($player);
+            return Server::getInstance()->getPluginManager()->getPlugin("EconomyAPI")->myMoney($player);
         }
     }
 }
