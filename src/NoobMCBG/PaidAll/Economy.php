@@ -28,7 +28,7 @@ class Economy {
         }
     }
 
-    public static function reduceMoney(Player $player){
+    public static function myMoney(Player $player){
         if(PaidAll::getInstance()->getDefaultCurrencyUnit()["BedrockEconomy"] == true){
             return Server::getInstance()->getPluginManager()->getPlugin("BedrockEconomy")->getAPI()->getPlayerBalance($player->getName());
         }
