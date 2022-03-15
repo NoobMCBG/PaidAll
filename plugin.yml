@@ -4,8 +4,9 @@ api: 4.0.0
 version: 2.0.0
 author: NoobMCBG
 description: Paid money to all people online
-depend: EconomyAPI
-softdepend: BedrockEconomy
+softdepend:
+- BedrockEconomy
+- EconomyAPI
 
 permissions:
   paidall.paid:
