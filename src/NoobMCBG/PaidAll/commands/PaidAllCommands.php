@@ -8,7 +8,7 @@ use pocketmine\player\Player;
 use pocketmine\plugin\PluginOwned;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use onebone\economyapi\EconomyAPI;
+use YTBJero\LibEconomy\Economy;
 use NoobMCBG\PaidAll\PaidAll;
 
 class PaidAllCommands extends Command implements PluginOwned {
@@ -50,11 +50,11 @@ class PaidAllCommands extends Command implements PluginOwned {
 		        }
 		        foreach($this->getOwningPlugin()->getServer()->getOnlinePlayers() as $player){
 		        	if($player instanceof Player){
-		        		if(EconomyAPI::getInstance()->myMoney($sender) >= (int)$args[0]){
+		        		if(Economy::myMoney($sender) >= (int)$args[0]){
 		        		    $count = count($this->getOwningPlugin()->getServer()->getOnlinePlayers());
 		        		    $amount = (int)$args[0]/$count;
-		        		    EconomyAPI::getInstance()->reduceMoney($sender, $args[0]);
-                            EconomyAPI::getInstance()->addMoney($player, $amount);
+                            Economy::reduceMoney($sender, $args[0]);
+                            Economy::addMoney($player, $amount);
                             if($this->getOwningPlugin()->getConfig()->getAll()["paid-successfully"]["msg"] == true){
                                 $sender->sendMessage(str_replace(["{money}"], [$amount], strval($this->getOwningPlugin()->getConfig()->getAll()["paid-successfully"]["msg-paid-successfully"])));
                             }
@@ -62,7 +62,7 @@ class PaidAllCommands extends Command implements PluginOwned {
                                 $this->getOwningPlugin()->getServer()->broadcastMessage(str_replace(["{money}", "{player}"], [$amount, $sender->getName()], strval($this->getOwningPlugin()->getConfig()->getAll()["broadcast-paid"]["msg-broadcast-paid"])));
                             }
                         }else{
-                        	$price = (int)$args[0] - EconomyAPI::getInstance()->myMoney($sender);
+                        	$price = (int)$args[0] - Economy::myMoney($sender);
                         	if($this->getOwningPlugin()->getConfig()->getAll()["paid-fallied"]["msg"] == true){
                                 $sender->sendMessage(str_replace(["{price}"], [$price], strval($this->getOwningPlugin()->getConfig()->getAll()["paid-fallied"]["msg-paid-fallied"])));
                             }
