@@ -7,6 +7,6 @@ projects:
     path: ""
     icon: icon.png
     libs:
-      - src: Eric-pm-pl/LibEconomy/LibEconomy
+      - src: DavidGlitch04-pm-pl/LibEconomy/LibEconomy
         version: ^1.0.0-alpha
 ...
