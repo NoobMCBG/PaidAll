@@ -11,6 +11,8 @@ use YTBJero\LibEconomy\Economy;
 use NoobMCBG\PaidAll\commands\PaidAllCommands;
 
 class PaidAll extends PluginBase implements Listener {
+	
+	protected $configversion = "2.0.0";
 
 	public static $instance;
 
@@ -22,6 +24,7 @@ class PaidAll extends PluginBase implements Listener {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->saveDefaultConfig();
 		$this->checkUpdate();
+		$this->checkConfigUpdate();
 		$this->getServer()->getCommandMap()->register("PaidAll", new PaidAllCommands($this));
 		self::$instance = $this;
 	}
@@ -29,8 +32,28 @@ class PaidAll extends PluginBase implements Listener {
 	public function checkUpdate(bool $isRetry = false) : void {
             $this->getServer()->getAsyncPool()->submitTask(new CheckUpdateTask($this->getDescription()->getName(), $this->getDescription()->getVersion()));
         }
-
-	public function paidAll($money){
+	
+	/** 
+        * @return void
+	*/
+	protected function checkConfigUpdate() : void {
+        	$updateconfig = false;
+        	if(!$this->getConfig()->exists("config-version")){
+            		$updateconfig = true;
+        	}
+        	if($this->getConfig()->get("config-version") !== $this->configversion){
+            		$updateconfig = true;
+        	}
+       		if($updateconfig){
+            		@unlink($this->getDataFolder() . "config.yml");
+            		$this->saveDefaultConfig();
+        	}
+    	}
+	
+	/**
+	* @param int|float $money
+	*/
+	public function paidAll(int|float $money){
 	    if(is_numeric($money)){
                foreach($this->getServer()->getOnlinePlayers() as $player){
             	   if($player instanceof Player){
