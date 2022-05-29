@@ -6,7 +6,4 @@ projects:
   PaidAll:
     path: ""
     icon: icon.png
-    libs:
-      - src: David-pm-pl/LibEconomy/LibEconomy
-        version: ^1.0.0-alpha
 ...
