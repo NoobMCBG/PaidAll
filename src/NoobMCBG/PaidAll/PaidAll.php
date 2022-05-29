@@ -7,7 +7,7 @@ namespace NoobMCBG\PaidAll;
 use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
-use NoobMCBG\PaidAll\libs\LibEconomy\Economy;
+use NoobMCBG\PaidAll\libs\davidglitch04\LibEconomy\Economy;
 use NoobMCBG\PaidAll\commands\PaidAllCommands;
 
 class PaidAll extends PluginBase implements Listener {
